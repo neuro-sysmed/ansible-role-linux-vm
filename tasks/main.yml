@@ -16,6 +16,7 @@
         - libcgroup-tools
         - singularity
         - bzip2
+        - tmux
 
     - name: copy gitconfig
       become: false
