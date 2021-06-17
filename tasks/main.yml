@@ -53,3 +53,6 @@
       copy:
         src: templates/bashrc
         dest: ~/.bashrc
+
+    - name: install azure-cli
+      import_tasks: azure_cli.yml
