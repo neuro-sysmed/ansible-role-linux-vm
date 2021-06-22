@@ -7,7 +7,7 @@
     - name: install packages
       package:
         name:
-        - python3
+        - python38
         - git
         - jq
         - nfs-utils
@@ -17,6 +17,9 @@
         - singularity
         - bzip2
         - tmux
+        - samba-client 
+        - samba-common 
+        - cifs-utils
 
     - name: copy gitconfig
       become: false
