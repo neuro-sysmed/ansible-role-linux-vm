@@ -59,3 +59,6 @@
 
     - name: install azure-cli
       import_tasks: azure_cli.yml
+
+    - name: install blobfuse
+      import_tasks: blobfuse.yml
