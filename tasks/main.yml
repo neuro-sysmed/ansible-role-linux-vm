@@ -21,6 +21,19 @@
         - samba-common 
         - cifs-utils
 
+     - name: Disable password login
+       lineinfile:
+          dest: /etc/ssh/sshd_config
+          state: present
+          regexp: ^PasswordAuthentication
+          line: PasswordAuthentication yes
+
+    - name: restart sshd
+      systemd:
+        name: sshd
+        enabled: true
+        state: restarted
+
     - name: copy gitconfig
       become: false
       copy:
